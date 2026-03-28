@@ -1,0 +1,84 @@
+╔════════════════════════════════════════════════════════════════╗
+║                    🚀 PUSH TO GITHUB                           ║
+║              Quick Reference - Copy & Paste                    ║
+╚════════════════════════════════════════════════════════════════╝
+
+📍 YOUR REPOSITORY: https://github.com/abhnvgrg/personal-pdf-assistant
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔧 STEP 1: INSTALL GIT (if not installed)
+   
+   Download: https://git-scm.com/download/win
+   Then restart PowerShell
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 STEP 2: CONFIGURE GIT (First time only)
+
+   git config --global user.name "abhnvgrg"
+   git config --global user.email "your.email@example.com"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📂 STEP 3: NAVIGATE TO PROJECT
+
+   cd "D:\Code\ML\Personal Assistant(PDF)"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 STEP 4: PUSH TO GITHUB (Copy all commands below)
+
+git init
+git add .
+git commit -m "Initial commit: Complete RAG PDF Assistant"
+git branch -M main
+git remote add origin https://github.com/abhnvgrg/personal-pdf-assistant.git
+git push -u origin main
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 AUTHENTICATION
+   
+   Username: abhnvgrg
+   Password: [Use Personal Access Token - NOT your GitHub password]
+   
+   Get token at: https://github.com/settings/tokens
+   Scope needed: ✅ repo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ VERIFY
+
+   Visit: https://github.com/abhnvgrg/personal-pdf-assistant
+   
+   Should see:
+   ✓ README.md displayed
+   ✓ All code files
+   ✓ LICENSE
+   ✓ Documentation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 WHAT'S INCLUDED
+
+   ✓ Complete RAG pipeline
+   ✓ FastAPI backend (8 endpoints)
+   ✓ Streamlit UI
+   ✓ Comprehensive documentation
+   ✓ All source code
+   ✓ LICENSE (MIT)
+   ✓ Setup scripts
+
+   EXCLUDED (via .gitignore):
+   ✗ data/ (your PDFs)
+   ✗ vector_store/ (indexes)
+   ✗ venv/ (virtual env)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 NEED HELP?
+   
+   Full guide: PUSH_TO_GITHUB.md
+   
+╚════════════════════════════════════════════════════════════════╝

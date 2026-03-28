@@ -1,0 +1,27 @@
+# Core RAG Dependencies
+langchain>=0.1.0
+langchain-community>=0.0.10
+pypdf>=3.17.0
+faiss-cpu>=1.13.0
+sentence-transformers>=2.2.0
+transformers>=4.36.0
+torch>=2.1.0
+
+# API & UI
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+streamlit>=1.30.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+numpy>=1.26.0
+pandas>=2.1.0
+
+# LLM & Embeddings
+huggingface-hub>=0.20.0
+accelerate>=0.26.0
+
+# Optional: For better performance
+tiktoken>=0.5.0
