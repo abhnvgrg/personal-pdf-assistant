@@ -133,7 +133,7 @@ The system follows a structured RAG pipeline:
 ### Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/RAG-PDF-Assistant.git
+git clone https://github.com/abhnvgrg/personal-pdf-assistant.git
 cd RAG-PDF-Assistant
 
 python -m venv venv
