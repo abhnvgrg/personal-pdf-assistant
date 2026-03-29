@@ -1,4 +1,4 @@
-# 📚 RAG PDF Personal Assistant
+#  RAG PDF Personal Assistant
 
 <div align="center">
 
@@ -17,43 +17,43 @@
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 This is a complete **Retrieval Augmented Generation (RAG)** system that transforms any PDF document into an intelligent Q&A assistant. Upload PDFs, ask questions in natural language, and receive comprehensive, well-synthesized answers with source citations.
 
 **Key Highlights:**
-- 🚀 Comprehensive answers (up to 3000+ words) synthesized from multiple sources
-- 📖 Full source attribution with page numbers and chunk IDs
-- 🤖 Advanced LLM with synthesis-focused prompting (no chunk dumping)
-- 💬 Conversation memory and context awareness
-- 👍 Human-in-the-loop feedback system
-- ⚡ Fast semantic search with FAISS
-- 🔄 RESTful API for easy integration
+-  Comprehensive answers (up to 3000+ words) synthesized from multiple sources
+-  Full source attribution with page numbers and chunk IDs
+-  Advanced LLM with synthesis-focused prompting (no chunk dumping)
+-  Conversation memory and context awareness
+-  Human-in-the-loop feedback system
+-  Fast semantic search with FAISS
+-  RESTful API for easy integration
 
 ---
 
-## 🌟 Features
+##  Features
 
 ### Core RAG Pipeline
-✅ **PDF Processing**: Extract text from multi-page PDFs using PyPDFLoader  
-✅ **Smart Chunking**: RecursiveCharacterTextSplitter with configurable overlap  
-✅ **Vector Embeddings**: Sentence-transformers (all-MiniLM-L6-v2) for semantic search  
-✅ **FAISS Vector Store**: Efficient similarity search across thousands of chunks  
-✅ **Intelligent Synthesis**: Flan-T5 with advanced prompting for comprehensive answers  
-✅ **Source Attribution**: Transparent citations with page numbers and chunk references  
+ **PDF Processing**: Extract text from multi-page PDFs using PyPDFLoader  
+ **Smart Chunking**: RecursiveCharacterTextSplitter with configurable overlap  
+ **Vector Embeddings**: Sentence-transformers (all-MiniLM-L6-v2) for semantic search  
+ **FAISS Vector Store**: Efficient similarity search across thousands of chunks  
+ **Intelligent Synthesis**: Flan-T5 with advanced prompting for comprehensive answers  
+ **Source Attribution**: Transparent citations with page numbers and chunk references  
 
 ### Advanced Features
-🎨 **Interactive Web UI**: Beautiful Streamlit interface with real-time chat  
-🔌 **REST API**: FastAPI backend with 8 endpoints for full control  
-💬 **Conversation Memory**: Maintains chat history for context-aware responses  
-👍 **HITL Feedback**: Like/dislike buttons + text feedback for continuous improvement  
-🔬 **LLM Evaluation**: Compare RAG vs non-RAG responses  
-📊 **Comprehensive Answers**: Up to 3000+ words with no artificial limits  
-🔄 **Multiple Sources**: Retrieves and synthesizes up to 8 chunks per query  
+ **Interactive Web UI**: Beautiful Streamlit interface with real-time chat  
+ **REST API**: FastAPI backend with 8 endpoints for full control  
+ **Conversation Memory**: Maintains chat history for context-aware responses  
+ **HITL Feedback**: Like/dislike buttons + text feedback for continuous improvement  
+ **LLM Evaluation**: Compare RAG vs non-RAG responses  
+ **Comprehensive Answers**: Up to 3000+ words with no artificial limits  
+ **Multiple Sources**: Retrieves and synthesizes up to 8 chunks per query  
 
 ---
 
-## 🎬 Demo
+##  Demo
 
 ### Sample Interaction
 
@@ -76,14 +76,14 @@ The key takeaway is that machine learning has evolved from a theoretical
 concept to a practical tool that drives innovation across industries...
 ```
 
-✅ **Complete sentences**  
-✅ **Multiple paragraphs**  
-✅ **Synthesized from 8 sources**  
-✅ **Source citations included**  
+ **Complete sentences**  
+ **Multiple paragraphs**  
+ **Synthesized from 8 sources**  
+ **Source citations included**  
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -118,17 +118,17 @@ concept to a practical tool that drives innovation across industries...
 3. **Response**: Comprehensive answer + sources + page numbers
 4. **Feedback**: User rates response (HITL)
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Personal-Assistant-PDF/
 │
-├── 🚀 Main Applications
+├──  Main Applications
 │   ├── app.py                  # Streamlit Web UI
 │   ├── main.py                 # FastAPI REST API
 │   └── requirements.txt        # Python dependencies
 │
-├── 🧠 RAG Pipeline
+├──  RAG Pipeline
 │   └── rag_pipeline/
 │       ├── loader.py           # PDF text extraction (PyPDFLoader)
 │       ├── chunking.py         # Intelligent text splitting
@@ -136,23 +136,23 @@ Personal-Assistant-PDF/
 │       ├── retriever.py        # FAISS vector search
 │       └── generator.py        # Flan-T5 answer synthesis
 │
-├── 🛠️ Utilities
+├──  Utilities
 │   └── utils/
 │       ├── prompt.py           # Synthesis-focused prompts
 │       └── evaluation.py       # RAG performance evaluation
 │
-├── 💾 Data (gitignored)
+├──  Data (gitignored)
 │   ├── data/                   # Uploaded PDF files
 │   └── vector_store/           # FAISS index + feedback logs
 │
-└── 📚 Documentation
+└──  Documentation
     ├── README.md               # This file
     ├── TESTING_GUIDE.md        # Testing instructions
     ├── SYNTHESIS_UPGRADE.md    # Answer quality improvements
     └── .env.example            # Configuration template
 ```
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - **Python**: 3.8 or higher
@@ -161,13 +161,13 @@ Personal-Assistant-PDF/
 
 ### Quick Start
 
-#### 1️⃣ Clone the Repository
+#### 1️ Clone the Repository
 ```bash
 git clone https://github.com/YOUR_USERNAME/RAG-PDF-Assistant.git
 cd RAG-PDF-Assistant
 ```
 
-#### 2️⃣ Create Virtual Environment
+#### 2️ Create Virtual Environment
 ```bash
 # Windows
 python -m venv venv
@@ -178,16 +178,16 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-#### 3️⃣ Install Dependencies
+#### 3️ Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
 **Note:** First run downloads models (~1GB total):
-- 📦 Embeddings: `all-MiniLM-L6-v2` (~90MB)
-- 🤖 LLM: `google/flan-t5-base` (~900MB)
+-  Embeddings: `all-MiniLM-L6-v2` (~90MB)
+-  LLM: `google/flan-t5-base` (~900MB)
 
-#### 4️⃣ Run the Application
+#### 4️ Run the Application
 
 **Option A: Full System (Recommended)**
 
@@ -195,13 +195,13 @@ Terminal 1 - Backend:
 ```bash
 python main.py
 ```
-✅ API running at `http://localhost:8000`
+ API running at `http://localhost:8000`
 
 Terminal 2 - Frontend:
 ```bash
 streamlit run app.py
 ```
-✅ UI running at `http://localhost:8501`
+ UI running at `http://localhost:8501`
 
 **Option B: API Only**
 ```bash
@@ -211,7 +211,7 @@ python main.py
 
 ---
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### Using the Web Interface
 
@@ -220,7 +220,7 @@ python main.py
 2. **Upload PDF**
    - Click "Choose a PDF file"
    - Select your document
-   - Click "🚀 Process PDF"
+   - Click "Process PDF"
    - Wait for processing (~1-2 sec/page)
 
 3. **Ask Questions**
@@ -228,11 +228,11 @@ python main.py
    - Adjust settings in sidebar:
      - **Top-K**: Number of sources (default: 8)
      - **Prompt Variant**: structured/simple/conversational
-   - Click "🔍 Get Answer"
+   - Click " Get Answer"
 
 4. **Review Response**
    - Read comprehensive answer
-   - Expand "📖 View Sources" for citations
+   - Expand " View Sources" for citations
    - Check page numbers and chunk IDs
    - Provide feedback with 👍/👎
 
@@ -332,36 +332,36 @@ API_PORT=8000
 
 **Current:** flan-t5-base (balanced performance)
 
-## 🎯 Key Features Explained
+##  Key Features Explained
 
 ### 1. Comprehensive Answer Synthesis
 Unlike basic RAG systems that simply concatenate chunks, this system:
-- ✅ Synthesizes information from up to 8 sources
-- ✅ Generates coherent, multi-paragraph responses
-- ✅ No artificial word limits (up to 3000+ words)
-- ✅ Uses advanced prompting to prevent chunk dumping
-- ✅ Maintains proper grammar and flow
+-  Synthesizes information from up to 8 sources
+-  Generates coherent, multi-paragraph responses
+-  No artificial word limits (up to 3000+ words)
+-  Uses advanced prompting to prevent chunk dumping
+-  Maintains proper grammar and flow
 
 ### 2. Source Attribution
 Every answer includes:
-- 📄 Page numbers from original PDF
-- 🔢 Chunk IDs for precise location
-- 📖 Preview of source text
-- 🔍 Expandable full source view
+-  Page numbers from original PDF
+-  Chunk IDs for precise location
+-  Preview of source text
+-  Expandable full source view
 
 ### 3. Human-in-the-Loop Feedback
-- 👍 Like/dislike buttons for quick feedback
-- 💬 Text feedback for detailed suggestions
-- 📊 Feedback logged to `vector_store/feedback.txt`
-- 🔄 Enables continuous improvement
+-  Like/dislike buttons for quick feedback
+-  Text feedback for detailed suggestions
+-  Feedback logged to `vector_store/feedback.txt`
+-  Enables continuous improvement
 
 ### 4. Conversation Memory
-- 💭 Maintains chat history within session
-- 🔗 Context-aware follow-up questions
-- 🗑️ Clear history to start fresh
-- 📜 View full conversation log
+-  Maintains chat history within session
+-  Context-aware follow-up questions
+-  Clear history to start fresh
+-  View full conversation log
 
-## 🔬 Evaluation
+##  Evaluation
 
 The system includes built-in evaluation to compare RAG vs non-RAG responses:
 
@@ -375,7 +375,7 @@ print(evaluator.generate_report([results]))
 
 Enable in UI by checking "Compare with/without context"
 
-## 🛠️ Development
+##  Development
 
 ### Adding Custom Prompt Templates
 
@@ -395,13 +395,13 @@ async def custom_function():
     return {"message": "Custom response"}
 ```
 
-## 📊 Performance
+##  Performance
 
 - **Embedding Generation**: ~1-2 seconds per page
 - **Query Response**: ~2-5 seconds (CPU), ~0.5-2s (GPU)
 - **Memory Usage**: ~2-4GB (base model), ~8-12GB (large model)
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 **Issue**: Models not downloading
 - **Solution**: Check internet connection, may need HuggingFace token for some models
@@ -415,7 +415,7 @@ async def custom_function():
 **Issue**: Slow responses
 - **Solution**: Use GPU if available, reduce `top_k`, use smaller models
 
-## 📝 Feedback Data
+##  Feedback Data
 
 User feedback is stored in `vector_store/feedback.txt` for HITL improvements:
 ```
@@ -427,14 +427,14 @@ Rating: like
 Feedback: Very accurate!
 ```
 
-## 🔒 Security Notes
+##  Security Notes
 
 - PDFs are stored in `data/` directory
 - Do not expose API publicly without authentication
 - Sanitize user inputs in production
 - Use environment variables for sensitive config
 
-## 🚧 Future Enhancements
+##  Future Enhancements
 
 - [ ] Multi-document support
 - [ ] Advanced evaluation metrics (BLEU, ROUGE)
@@ -444,7 +444,7 @@ Feedback: Very accurate!
 - [ ] Support for other document formats (DOCX, TXT)
 - [ ] Fine-tuning on user feedback
 
-## 📊 Performance
+##  Performance
 
 ### Benchmarks
 - **PDF Processing**: ~1-2 seconds per page
@@ -460,12 +460,12 @@ Feedback: Very accurate!
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Run the test suite:
 ```bash
 # Quick functionality test
-python -c "from rag_pipeline import *; print('✅ All modules imported')"
+python -c "from rag_pipeline import *; print(' All modules imported')"
 
 # API health check
 curl http://localhost:8000/
@@ -478,7 +478,7 @@ See `TESTING_GUIDE.md` for detailed testing instructions.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please:
 
@@ -499,7 +499,7 @@ Contributions are welcome! Please:
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Models Not Downloading
 - Check internet connection
@@ -522,45 +522,9 @@ Contributions are welcome! Please:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙏 Acknowledgments
-
-Built with amazing open-source technologies:
-
-- **[LangChain](https://github.com/langchain-ai/langchain)** - Document processing framework
-- **[HuggingFace Transformers](https://github.com/huggingface/transformers)** - State-of-the-art NLP models
-- **[FAISS](https://github.com/facebookresearch/faiss)** - Efficient similarity search
-- **[Streamlit](https://streamlit.io/)** - Beautiful web UI framework
-- **[FastAPI](https://fastapi.tiangolo.com/)** - Modern, fast web framework
-- **[Sentence Transformers](https://www.sbert.net/)** - Semantic embeddings
-
----
-
-## 📧 Contact & Support
-
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/RAG-PDF-Assistant/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/YOUR_USERNAME/RAG-PDF-Assistant/discussions)
-- **Email**: your.email@example.com
-
----
-
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star! ⭐
-
----
-
-<div align="center">
-
-**Built with ❤️ using RAG Technology**
-
-*Transform any PDF into an intelligent Q&A assistant*
-
-[⬆ Back to Top](#-rag-pdf-personal-assistant)
-
-</div>

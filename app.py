@@ -70,15 +70,15 @@ st.markdown("Upload a PDF and ask questions about its content!")
 
 # Sidebar
 with st.sidebar:
-    st.header("⚙️ Settings")
+    st.header(" Settings")
     
     # System info
     info = get_system_info()
     if info and info.get('pdf_loaded'):
-        st.success(f"✅ PDF Loaded: {info.get('current_pdf', 'Unknown')}")
-        st.info(f"📊 Total chunks: {info.get('total_documents', 0)}")
+        st.success(f" PDF Loaded: {info.get('current_pdf', 'Unknown')}")
+        st.info(f" Total chunks: {info.get('total_documents', 0)}")
     else:
-        st.warning("⚠️ No PDF loaded")
+        st.warning(" No PDF loaded")
     
     st.divider()
     
@@ -97,7 +97,7 @@ with st.sidebar:
     st.divider()
     
     # Clear conversation
-    if st.button("🗑️ Clear Conversation"):
+    if st.button(" Clear Conversation"):
         st.session_state.conversation_history = []
         st.session_state.feedback_submitted = set()
         try:
@@ -110,15 +110,15 @@ with st.sidebar:
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    st.header("📄 Upload PDF")
+    st.header(" Upload PDF")
     uploaded_file = st.file_uploader("Choose a PDF file", type=['pdf'])
     
     if uploaded_file is not None:
-        if st.button("🚀 Process PDF", type="primary"):
+        if st.button(" Process PDF", type="primary"):
             with st.spinner("Processing PDF..."):
                 try:
                     result = upload_pdf(uploaded_file)
-                    st.success(f"✅ PDF processed successfully!")
+                    st.success(f" PDF processed successfully!")
                     st.json(result)
                     time.sleep(1)
                     st.rerun()
@@ -126,13 +126,13 @@ with col1:
                     st.error(f"Error: {str(e)}")
 
 with col2:
-    st.header("💬 Ask Questions")
+    st.header(" Ask Questions")
     
     # Check if PDF is loaded
     if info and info.get('pdf_loaded'):
         question = st.text_input("Enter your question:", placeholder="What is the main topic of this document?")
         
-        if st.button("🔍 Get Answer", type="primary"):
+        if st.button(" Get Answer", type="primary"):
             if question:
                 with st.spinner("Generating answer..."):
                     try:
@@ -154,11 +154,11 @@ with col2:
             else:
                 st.warning("Please enter a question")
     else:
-        st.info("👆 Please upload a PDF first")
+        st.info(" Please upload a PDF first")
 
 # Display conversation history
 st.divider()
-st.header("💭 Conversation History")
+st.header(" Conversation History")
 
 if st.session_state.conversation_history:
     for idx, exchange in enumerate(reversed(st.session_state.conversation_history)):
@@ -169,7 +169,7 @@ if st.session_state.conversation_history:
             st.markdown(f"**A:** {exchange['answer']}")
             
             # Sources
-            with st.expander("📖 View Sources"):
+            with st.expander(" View Sources"):
                 for source in exchange['sources']:
                     st.markdown(f"""
                     **Source {source['source_num']}** - Page {source['page']}, Chunk {source['chunk_id']}
@@ -180,7 +180,7 @@ if st.session_state.conversation_history:
             
             # Evaluation (if available)
             if exchange.get('answer_without_context'):
-                with st.expander("🔬 Evaluation: With vs Without Context"):
+                with st.expander(" Evaluation: With vs Without Context"):
                     col_eval1, col_eval2 = st.columns(2)
                     with col_eval1:
                         st.markdown("**With RAG Context:**")
@@ -232,7 +232,7 @@ if st.session_state.conversation_history:
                         except Exception as e:
                             st.error(f"Error: {str(e)}")
             else:
-                st.success("✅ Feedback submitted")
+                st.success(" Feedback submitted")
             
             # Metadata
             with st.expander("ℹ️ Metadata"):
@@ -242,11 +242,4 @@ if st.session_state.conversation_history:
 else:
     st.info("No conversation yet. Ask a question to get started!")
 
-# Footer
-st.divider()
-st.markdown("""
-<div style='text-align: center'>
-    <p>🤖 Powered by LangChain, HuggingFace, FAISS & Streamlit</p>
-    <p>RAG System with Human-in-the-Loop Feedback</p>
-</div>
-""", unsafe_allow_html=True)
+
