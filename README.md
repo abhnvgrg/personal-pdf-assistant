@@ -134,7 +134,7 @@ The system follows a structured RAG pipeline:
 
 ```bash
 git clone https://github.com/abhnvgrg/personal-pdf-assistant.git
-cd RAG-PDF-Assistant
+cd personal-pdf-assistant
 
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
